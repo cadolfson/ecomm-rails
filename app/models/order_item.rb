@@ -1,5 +1,5 @@
 class OrderItem < ApplicationRecord
   belongs_to :order
-  belongs_to :product
-  belongs_to :animal
+  has_one :product
+  has_one :animal
 end
