@@ -13,9 +13,9 @@ services:
     image: cadolfson/ecomm-rails
     command: "bundle exec rails server -e production -p 3000 -b 0.0.0.0"
     environment:
-      - SECRET_KEY_BASE 123456789 
+      SECRET_KEY_BASE: 123456789
     ports:
       - "3000:3000"
      
 volumes:
-    db:
+  db:
