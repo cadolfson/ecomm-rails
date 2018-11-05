@@ -1,12 +1,18 @@
 version: '3'
 
 services:
-  db:
-    image: postgres
-  app:
-    image: none
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
+   db:
+     image: postgres
+     volumes:
+       - db:/var/lib/postgresql/data
+     restart: always
 
+   rails:
+     depends_on:
+       - db
+     image: cadolfson/ecomm-rails
+     ports:
+       - "3000:3000"
+     
+volumes:
+    db:
