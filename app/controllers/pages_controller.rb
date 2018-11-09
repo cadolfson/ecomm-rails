@@ -1,7 +1,7 @@
-class PagesController < ApplicationController
-  
-  def permalink
+# frozen_string_literal: true
 
+class PagesController < ApplicationController
+  def permalink
     @page = Page.find_by(permalink: params[:permalink])
 
     if @page.nil?
@@ -9,11 +9,9 @@ class PagesController < ApplicationController
     else
       render :show
     end
-    
   end
 
   def show
     @page = Page.find(params[:id])
   end
-
 end
