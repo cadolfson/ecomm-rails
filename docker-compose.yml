@@ -14,6 +14,7 @@ services:
     command: "bundle exec rails server -e production -p 3000 -b 0.0.0.0"
     environment:
       SECRET_KEY_BASE: 123456789
+      RAILS_SERVE_STATIC_FILES: "true"
     ports:
       - "3000:3000"
      
