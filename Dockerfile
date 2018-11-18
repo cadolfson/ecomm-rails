@@ -2,6 +2,7 @@ FROM ruby:2.3.1
 
 ENV RAILS_ENV='production'
 ENV RACK_ENV='production'
+ENV SECRET_KEY_BASE='123456789'
 
 RUN mkdir /code
 WORKDIR /code
