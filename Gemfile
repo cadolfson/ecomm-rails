@@ -31,7 +31,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'activeadmin'
+gem 'bootstrap', '~> 4.1.3'
 gem 'devise'
+gem 'jquery-rails'
+gem 'kaminari'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
