@@ -32,12 +32,13 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'activeadmin'
 gem 'bootstrap', '~> 4.1.3'
+gem 'carrierwave'
 gem 'devise'
 gem 'jquery-rails'
 gem 'kaminari'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
