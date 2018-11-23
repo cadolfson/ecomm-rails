@@ -1,18 +1,30 @@
 <header>
-  <nav class="navbar navbar-dark">
-    <%= link_to "MB Humain Society", root_path, class: "navbar-brand" %>
-    <ul class="nav navbar-nav">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "icon.jpg", size: "30", class: "d-inline-block align-top rounded" %>
+      MB Humain Society
+    <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <li class="nav-item active">
-        <a class="nav-link" href="movies/new">New Movie <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-    <form class="form-inline pull-xs-right">
-      <input class="form-control" type="text" placeholder="Search">
-      <button class="btn btn-success-outline" type="submit">Search</button>
-    </form>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%# <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> %>
+          <%= link_to "Products", products_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Animals", animals_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Animals", animals_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <%= form_tag search_results_path, method: "get", class: "form-inline my-2 my-lg-0" do %>
+        <%= search_field_tag :q, nil, placeholder: "Search", class: "form-control mr-sm-2" %>
+        <%= button_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+      <% end %>
+    </div>
   </nav>
 </header>
